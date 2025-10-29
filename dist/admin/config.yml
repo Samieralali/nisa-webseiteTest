@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+site_url: "https://nisa-ferienunterkuenfte.de"
+
+collections:
+  - name: "seiten"
+    label: "Webseiten-Inhalte"
+    folder: "src/content"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
+      - { label: "Bild", name: "image", widget: "image", required: false }
